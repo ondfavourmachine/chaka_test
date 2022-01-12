@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   external_api_key: 'IHDTTX6UZQE4TAK2',
-  external_api_key2: '84688b7361a8bc0bbf7c976713da20d4'
+  external_api_key2: 'b53c4698f0435febb28ef0a71048da9a'
 };
 
 /*

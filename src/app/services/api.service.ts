@@ -75,8 +75,14 @@ export class ApiService {
    const calcPerc = (close: number, open: number) => (close - open) / 100;
    const arrayToUse = stocks  != undefined ? stocks : backUp;
     for await (const stock of (arrayToUse as Array<any>)) {
-       const res = await this.getLatestEndOfDayHighAndLowForAStock(stock.symbol); 
-       stocks != undefined ? this.constructedStocks.push({...res, name: stock.name}) : this.constructedStocks.push({date: res.date,close: res.close,high: res.high,open: res.open,low: res.low,symbol: res.symbol,name: stock.name}) ;
+      let res;
+       try {
+        res = await this.getLatestEndOfDayHighAndLowForAStock(stock.symbol); 
+        stocks != undefined ? this.constructedStocks.push({...res, name: stock.name}) : this.constructedStocks.push({date: res.date,close: res.close,high: res.high,open: res.open,low: res.low,symbol: res.symbol,name: stock.name}) ;
+       } catch (error) {
+         console.log(error);
+       }
+      
     }
     // this.constructedStocks.forEach(elem => elem.percentageLossOrGain = calcPerc(elem.close, elem.open))
     localStorage.setItem('stocks_info', JSON.stringify(this.constructedStocks));
