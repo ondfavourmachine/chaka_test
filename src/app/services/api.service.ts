@@ -57,7 +57,7 @@ export class ApiService {
   }
 
  async constructDataForDisplay(stocks: Array<{name: string, symbol: string }>){
-
+    //  debugger;
     for await (const stock of stocks) {
        const res = await this.getLatestEndOfDayHighAndLowForAStock(stock.symbol); 
        this.constructedStocks.push({...res, name: stock.name});

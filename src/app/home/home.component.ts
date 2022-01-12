@@ -19,10 +19,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.apiservice.stocks$.subscribe(
       (val: any[]) => {
-        const stocks = JSON.parse(localStorage.getItem('stocks_info') as string) as any[];
-        if (val.length < 1 && stocks.length < 1) {
+        const stocks = JSON.parse(localStorage.getItem('stocks_info') as string);
+        debugger
+        if (val.length < 1 && Array.isArray(stocks)) {
           this.apiservice.retreivelatestStockData()
         }else{
+          console.log(stocks);
           this.stocks = stocks;
         }
       },
