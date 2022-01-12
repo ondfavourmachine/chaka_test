@@ -14,6 +14,7 @@ export const  backUp = () => [
       "open": 319.67,
       "split_factor": 1,
       "symbol": "MSFT",
+      "name":"Microsoft Corporation",
       "volume": 32441986
     },
     {
@@ -31,6 +32,7 @@ export const  backUp = () => [
       "open": 176.12,
       "split_factor": 1,
       "symbol": "AAPL",
+      "name":"Apple Inc",
       "volume": 70577429
     },
     {
@@ -48,6 +50,7 @@ export const  backUp = () => [
       "open": 3331.5,
       "split_factor": 1,
       "symbol": "AMZN",
+      "name":"Amazon.com Inc",
       "volume": 2290087
     },
     {
@@ -65,6 +68,7 @@ export const  backUp = () => [
       "open": 2831.0901,
       "split_factor": 1,
       "symbol": "GOOG",
+      "name":"Alphabet Inc - Class C",
       "volume": 1151158
     },
     {
@@ -82,6 +86,7 @@ export const  backUp = () => [
       "open": 2823,
       "split_factor": 1,
       "symbol": "GOOGL",
+      "name":"Alphabet Inc - Class A",
       "volume": 1217948
     },
     {
@@ -99,6 +104,7 @@ export const  backUp = () => [
       "open": 136.02,
       "split_factor": 1,
       "symbol": "BABA",
+      "name":"Alibaba Group Holding Ltd",
       "volume": 25175665
     },
     {
@@ -116,6 +122,7 @@ export const  backUp = () => [
       "open": 335.18,
       "split_factor": 1,
       "symbol": "FB",
+      "name":"Meta Platforms Inc - Class A",
       "volume": 13815598
     },
     {},
@@ -135,6 +142,7 @@ export const  backUp = () => [
       "open": 16.11,
       "split_factor": 1,
       "symbol": "VOD",
+      "name":"Vodafone Group plc",
       "volume": 6575259
     },
     {
@@ -152,6 +160,7 @@ export const  backUp = () => [
       "open": 214.48,
       "split_factor": 1,
       "symbol": "V",
+      "name":"Visa Inc - Class A",
       "volume": 6815452
     },
     {
@@ -169,6 +178,7 @@ export const  backUp = () => [
       "open": 168.46,
       "split_factor": 1,
       "symbol": "JPM",
+      "name":"JPMorgan Chase Company",
       "volume": 11047546
     },
     {
@@ -186,6 +196,7 @@ export const  backUp = () => [
       "open": 169.61,
       "split_factor": 1,
       "symbol": "JNJ",
+      "name":"Johnson \u0026 Johnson",
       "volume": 7538678
     },
     {
@@ -203,6 +214,7 @@ export const  backUp = () => [
       "open": 143.68,
       "split_factor": 1,
       "symbol": "WMT",
+      "name":"Walmart Inc",
       "volume": 5024776
     },
     {
@@ -220,6 +232,7 @@ export const  backUp = () => [
       "open": 368.94,
       "split_factor": 1,
       "symbol": "MA",
+      "name":"Mastercard Incorporated - Class A",
       "volume": 4023905
     }
   ]
