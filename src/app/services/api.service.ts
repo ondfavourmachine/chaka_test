@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of, PartialObserver } from 'rxjs';
 import { map, pluck } from 'rxjs/operators';
+import { backUp } from 'src/backUp';
 import { environment } from 'src/environments/environment';
 
 export interface Stock {
@@ -62,17 +63,20 @@ export class ApiService {
   retreivelatestStockData(){
     const pObs : PartialObserver<{name: string, symbol: string}[]> = {
       next: val => this.constructDataForDisplay(val),
-      error: error => console.log(error)
+      error: error =>{
+        const backUpJson = backUp();
+        this.constructDataForDisplay(undefined, backUpJson);
+      }
     }
     this.fetchStocks().subscribe(pObs);
   }
 
- async constructDataForDisplay(stocks: Array<{name: string, symbol: string }>){
+ async constructDataForDisplay(stocks?: Array<{name: string, symbol: string }>, backUp?: Array<any>){
    const calcPerc = (close: number, open: number) => (close - open) / 100;
-    for await (const stock of stocks) {
+   const arrayToUse = stocks  != undefined ? stocks : backUp;
+    for await (const stock of (arrayToUse as Array<any>)) {
        const res = await this.getLatestEndOfDayHighAndLowForAStock(stock.symbol); 
-       this.constructedStocks.push({...res, 
-        name: stock.name});
+       stocks != undefined ? this.constructedStocks.push({...res, name: stock.name}) : this.constructedStocks.push({date: res.date,close: res.close,high: res.high,open: res.open,low: res.low,symbol: res.symbol,name: stock.name}) ;
     }
     // this.constructedStocks.forEach(elem => elem.percentageLossOrGain = calcPerc(elem.close, elem.open))
     localStorage.setItem('stocks_info', JSON.stringify(this.constructedStocks));
