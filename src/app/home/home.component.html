@@ -11,18 +11,20 @@
   </section>
 
   <section class="section_two w-full h-auto">
-      <div class="stocks_container w-full flex justify-between gap-1 items-start">
-        <div class="a_stock bg-[#e6e6e6] rounded-md w-[10%] h-48 px-4 pt-3 pb-3 flex flex-col justify-around">
+      <div class="stocks_container w-full grid gap-2 grid-cols-10 grid-rows-1">
+        <div [id]="'a_stock'+ '_' + i" *ngFor="let stock of stocks | slice:0:10; index as i" 
+            class="a_stock">
             <div class="a_stock__firstPart">
-                <h4 class="font-semibold">BNGO</h4>
-                <span class="inline-block break-words company_name">
-                    Binance Corporation Limited
+                <h4 class="font-semibold mb-0 leading-3">{{ stock.symbol}}</h4>
+                <span class="company_name">
+                    {{ stock.name}}
                 </span>	
             </div>
 
             <div class="a_stock__secondPart flex flex-col items-end justify-end">
-                <h4 class="figure">10.3</h4>
-                <span class="integer"> +1.8%</span>
+                <h4 class="figure">{{ stock.close }} </h4>
+                <span [ngClass]="{'green': stock.pLossColor == 'green', 
+                   'red': stock.pLossColor == 'red'}" class="integer"> {{stock?.percentageLossOrGain}}%</span>
             </div>
         </div>
       </div>

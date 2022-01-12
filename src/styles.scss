@@ -14,7 +14,9 @@ $overlay-color: #312e2e;
 
 .section_two{
     & .a_stock{
+        @apply bg-[#e6e6e6] rounded-md w-full h-48 px-4 pt-4 pb-2 flex flex-col justify-between;
         &__firstPart .company_name{
+            @apply inline-block break-words font-medium mt-1 capitalize;
             font-size: 0.65rem;
         }
 
