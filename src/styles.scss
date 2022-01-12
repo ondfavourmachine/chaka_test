@@ -99,3 +99,14 @@ $overlay-color: #312e2e;
 .user-angular-material .mat-dialog-container{
     padding: 12px;
 }
+
+@media (min-width: 300px){
+    .user-angular-material{
+        width: 90vw !important;
+        height: 90vh !important;
+        max-width: 90vw !important;
+    }
+    .user-angular-material .mat-dialog-container{
+
+    }
+}

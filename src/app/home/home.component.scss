@@ -6,13 +6,23 @@
 }
 
 .red{
-    @apply text-red-400
+  color: rgba(243, 113, 113, 1) !important;
 
 }
 
 .green{
-    @apply text-green-400
+    color: rgba(74, 222, 128, 1) !important;
 
+}
+
+.body{
+   grid-auto-rows: auto;
+}
+
+@media (min-width: 640px){
+     .body  {
+         grid-auto-rows: none !important;
+     } 
 }
 
 
