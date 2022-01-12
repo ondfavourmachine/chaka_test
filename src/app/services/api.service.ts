@@ -4,12 +4,23 @@ import { BehaviorSubject, Observable, of, PartialObserver } from 'rxjs';
 import { map, pluck } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
+export interface Stock {
+  close: number
+  date: string
+  high: number
+  low: number
+  name: string
+  open: number
+  symbol: string,
+  percentageLossOrGain?: number;
+  pLossColor?: any,
+}
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
   getCurrentDate = () => new Date(Date.now()).toISOString().split('T')[0];
-  constructedStocks: any[] = [];
+  constructedStocks: Stock[] = [];
   envkey = environment.external_api_key2;
   stocksSubject = new BehaviorSubject([]) as any;
   stocks$ = this.stocksSubject.asObservable();
@@ -20,7 +31,7 @@ export class ApiService {
 
 
 
-   broadCastStock(anything: any[]) {
+   broadCastStock(anything: Stock[]) {
      this.stocksSubject.next(anything);
    }
 
@@ -57,11 +68,13 @@ export class ApiService {
   }
 
  async constructDataForDisplay(stocks: Array<{name: string, symbol: string }>){
-    //  debugger;
+   const calcPerc = (close: number, open: number) => (close - open) / 100;
     for await (const stock of stocks) {
        const res = await this.getLatestEndOfDayHighAndLowForAStock(stock.symbol); 
-       this.constructedStocks.push({...res, name: stock.name});
+       this.constructedStocks.push({...res, 
+        name: stock.name});
     }
+    // this.constructedStocks.forEach(elem => elem.percentageLossOrGain = calcPerc(elem.close, elem.open))
     localStorage.setItem('stocks_info', JSON.stringify(this.constructedStocks));
     this.broadCastStock(this.constructedStocks);
   }
