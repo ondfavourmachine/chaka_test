@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './services/api.service';
+
 
 
 
@@ -11,16 +11,13 @@ import { ApiService } from './services/api.service';
 export class AppComponent implements OnInit {
   title = 'chaka-test-app';
  
-  constructor(private apiservice: ApiService){
+  constructor(){
     
   }
 
   ngOnInit(): void {
 
-    this.apiservice.stocks$.subscribe(
-      (val: any[]) => console.log(val),
-      (err: any) => console.log(err)
-    )
+   
     // this.retreivelatestStockData();
   }
 

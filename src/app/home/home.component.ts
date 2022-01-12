@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ApiService } from '../services/api.service';
 import { UseAngularMaterialComponent } from '../use-angular-material/use-angular-material.component';
 
 
@@ -9,12 +10,24 @@ import { UseAngularMaterialComponent } from '../use-angular-material/use-angular
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  stocks: any[] = [];
   constructor(
+    private apiservice: ApiService,
     private dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
+    this.apiservice.stocks$.subscribe(
+      (val: any[]) => {
+        const stocks = JSON.parse(localStorage.getItem('stocks_info') as string) as any[];
+        if (val.length < 1 && stocks.length < 1) {
+          this.apiservice.retreivelatestStockData()
+        }else{
+          this.stocks = stocks;
+        }
+      },
+      (err: any) => console.log(err)
+    )
   }
 
   showMatDialog(){

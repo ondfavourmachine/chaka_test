@@ -57,12 +57,12 @@ export class ApiService {
   }
 
  async constructDataForDisplay(stocks: Array<{name: string, symbol: string }>){
-  //  console.log(stocks);
+
     for await (const stock of stocks) {
        const res = await this.getLatestEndOfDayHighAndLowForAStock(stock.symbol); 
        this.constructedStocks.push({...res, name: stock.name});
     }
-
     localStorage.setItem('stocks_info', JSON.stringify(this.constructedStocks));
+    this.broadCastStock(this.constructedStocks);
   }
 }
