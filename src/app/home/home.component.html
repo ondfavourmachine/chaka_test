@@ -1,0 +1,262 @@
+<div class="links w-full flex justify-center items-center mb-5">
+    <a  href="javascript:void(0)" (click)="showMatDialog()" class="first_page mr-2 underline font-medium">
+        Blog
+    </a>
+</div>
+  <section class="section_one mb-4 w-full">
+      <div class="section_one__child">
+          <small class="capitalize text-lg text-gray-500 mb-2">market View</small>
+          <h2 class="font-semibold text-3xl">Today's Market Breifing</h2>
+      </div>
+  </section>
+
+  <section class="section_two w-full h-auto">
+      <div class="stocks_container w-full flex justify-between gap-1 items-start">
+        <div class="a_stock bg-[#e6e6e6] rounded-md w-[10%] h-48 px-4 pt-3 pb-3 flex flex-col justify-around">
+            <div class="a_stock__firstPart">
+                <h4 class="font-semibold">BNGO</h4>
+                <span class="inline-block break-words company_name">
+                    Binance Corporation Limited
+                </span>	
+            </div>
+
+            <div class="a_stock__secondPart flex flex-col items-end justify-end">
+                <h4 class="figure">10.3</h4>
+                <span class="integer"> +1.8%</span>
+            </div>
+        </div>
+      </div>
+
+      <div class="my-3 w-full stocks_footer">
+          <small class="footer_text text-gray-400"> active stocks. Last updated Jan, 11th 2022</small>
+      </div>
+  </section>
+
+  <hr class="bg-slate-400 my-1">
+
+  <section class="section_three h-auto mb-8">
+      <div class="sector_Highlights w-full flex  gap-1 h-full">
+        <div class="sector_Highlights__firstHalf w-9/12 h-full">
+                <div class="heading mt-4">
+                    <h1 class="w-full capitalize font-semibold text-2xl">sector highlights</h1>
+                    <small class="text-gray-500">Jan 11th 2022 10.18am</small>
+                </div>
+
+            <div class="body w-full flex justify-around items-center gap-4">
+                <div class="h-36 w-1/2 rounded-md">
+                    <div class="overlay overlay_health w-full h-full">
+                        <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                            <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                                Health Care
+                            </span>
+                            <div class="cover_figure self-end ">
+                                <span class="inline-block bg-green-300 rounded-sm text-white px-2 py-1">+0.40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-36 w-1/2 rounded-md">
+                    <div class="overlay overlay_industrial w-full h-full">
+                        <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                            <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                                industrial
+                            </span>
+                            <div class="cover_figure self-end ">
+                                <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-slate-400 my-2">
+            <div class="other_parts">
+                <h1 class="w-full capitalize font-semibold text-lg">Ex-Dividends</h1> 
+                <p class="text-gray-500 w-full flex justify-between">
+                    <span class="">Symbol</span>
+                    <span>Amount</span>
+                </p>
+
+                <hr class="bg-slate-400 mt-1">
+                <div class="mt-1 text-gray-400">There are no upcoming dividends.</div>
+            </div>
+        </div>
+        <div class="sector_Highlights__secondHalf w-3/12">
+            <div class="heading mt-4 px-4">
+                <h1 class="w-full capitalize font-semibold text-2xl mb-4">My watch list ✨</h1>
+                <small class="inline-block text-gray-700 leading-tight ">Your watchlist is empty. Build your watchlist by starring(✨) the stocks you want to follow</small>
+            </div>
+        </div>
+      </div>
+  </section>
+
+  <hr class="bg-slate-400 my-1">
+  <section class="section_four mt-1 mb-5 w-full">
+      <div class="Earnings w-full">
+        <h1 class="w-full capitalize font-semibold text-lg mb-3">Earnings</h1> 
+        <p class="text-gray-500 w-full flex justify-between">
+            <span class="capitalize">Symbol</span>
+            <span  class="capitalize">Company</span>
+            <span class="capitalize">Fiscal Period</span>
+            <span class="capitalize">Consensus Estimated EPS</span>
+            <span class="capitalize">Actual EPS</span>
+            <span class="capitalize">Surprise</span>
+            <span class="capitalize">EPS,Year ago</span>
+            <span class="capitalize">% Change from last year</span>
+        </p>
+        <hr class="bg-slate-400 my-2">
+      </div>
+  </section>
+
+
+  <hr class="bg-slate-400 my-1">
+  <section class="section_five h-auto mt-1 pb-5">
+    <div class="sector_Highlights w-full flex  gap-1 h-full">
+      <div class="sector_Highlights__firstHalf w-full h-full">
+              <div class="heading mt-4">
+                  <h1 class="w-full capitalize font-semibold text-2xl">sector performance</h1>
+                  <small class="text-gray-500">Jan 11th 2022 11.18am</small>
+              </div>
+
+          <div class="body w-full grid gap-3 grid-cols-4 mb-3 grid-rows-2">
+              <div class="h-28 rounded-md">
+                  <div class="overlay overlay_health w-full h-full">
+                      <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                          <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                              Health Care
+                          </span>
+                          <div class="cover_figure self-end ">
+                              <span class="inline-block bg-green-300 rounded-sm text-white px-2 py-1">+0.40%</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="h-28 rounded-md">
+                  <div class="overlay overlay_communication w-full h-full">
+                      <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                          <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                              Communication services
+                          </span>
+                          <div class="cover_figure self-end ">
+                              <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.40%</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="h-28 rounded-md">
+                <div class="overlay overlay_utilities w-full h-full">
+                    <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                        <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                            Utilities
+                        </span>
+                        <div class="cover_figure self-end ">
+                            <span class="inline-block bg-green-300 rounded-sm text-white px-2 py-1">+0.80%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-28 rounded-md">
+                <div class="overlay overlay_consumerElectronics w-full h-full">
+                    <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                        <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                            Consumer Discretionary
+                        </span>
+                        <div class="cover_figure self-end ">
+                            <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.57%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-28  rounded-md">
+                <div class="overlay overlay_industrial w-full h-full">
+                    <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                        <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                            Financials
+                        </span>
+                        <div class="cover_figure self-end ">
+                            <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.27%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-28  rounded-md">
+                <div class="overlay overlay_staples w-full h-full">
+                    <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                        <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                            Consumer staples
+                        </span>
+                        <div class="cover_figure self-end ">
+                            <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.33%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-28  rounded-md">
+                <div class="overlay overlay_materials w-full h-full">
+                    <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                        <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                            Materials
+                        </span>
+                        <div class="cover_figure self-end ">
+                            <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.21%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-28  rounded-md">
+                <div class="overlay overlay_technology w-full h-full">
+                    <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                        <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                            Technology
+                        </span>
+                        <div class="cover_figure self-end ">
+                            <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.69%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="body w-full grid gap-3 grid-cols-3 grid-rows-1 ">
+            <div class="h-28 rounded-md">
+                <div class="overlay overlay_realEstate w-full h-full">
+                    <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                        <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                            Health Care
+                        </span>
+                        <div class="cover_figure self-end ">
+                            <span class="inline-block bg-green-300 rounded-sm text-white px-2 py-1">+0.40%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-28 rounded-md">
+                <div class="overlay overlay_energy w-full h-full">
+                    <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                        <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                            Communication services
+                        </span>
+                        <div class="cover_figure self-end ">
+                            <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.40%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-28 rounded-md">
+              <div class="overlay overlay_industrial w-full h-full">
+                  <div class="cover w-full h-full flex flex-col justify-between px-4 py-2">
+                      <span class="cover_text w-fit px-3 capitalize text-white bg-blend-darken">
+                          industrials
+                      </span>
+                      <div class="cover_figure self-end ">
+                          <span class="inline-block bg-red-400 rounded-sm text-white px-2 py-1">-0.78%</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+        </div>
+         
+      </div>
+    
+    </div>
+  </section>

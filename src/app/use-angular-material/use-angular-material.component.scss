@@ -1,0 +1,11 @@
+
+
+.closeBtn{
+    font-size: 3rem;
+    transition: all 300ms ease-in-out;
+    @apply font-semibold text-gray-500 rotate-45  cursor-pointer;
+
+    &:hover{
+        @apply opacity-80;
+    }
+}

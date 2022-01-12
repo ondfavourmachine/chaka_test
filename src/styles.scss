@@ -5,3 +5,95 @@
 
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+
+$overlay-color: #312e2e;
+
+.section_two{
+    & .a_stock{
+        &__firstPart .company_name{
+            font-size: 0.65rem;
+        }
+
+        &__secondPart .integer{
+            font-size: 0.73rem;
+            letter-spacing: 0.15ch;
+            color: #808080;
+            @apply font-semibold;
+        }
+    }
+
+   & .stocks_footer .footer_text{
+    //    letter-spacing: 0.15ch;
+       font-size: 0.65rem;
+       @apply font-medium;
+   }
+}
+
+
+.section_three, .section_five{
+    & .cover .cover_text{
+            backdrop-filter: brightness(95%);
+    }
+    & .overlay{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: lighten($overlay-color, 10%);
+        background-blend-mode: overlay;
+        transition: all 400ms ease-in;
+        cursor: pointer;
+
+        &.overlay_health{
+            background-image: url(./assets/images/health.jpg);
+        }
+
+        &.overlay_industrial{
+            background-image: url(./assets/images/industrial.jpg);
+        }
+
+        &.overlay_realEstate{
+            background-image: url(./assets/images/real_estate.jpg);
+        }
+
+        &.overlay_energy{
+            background-image: url(./assets/images/energy.jpg);
+        }
+
+        &.overlay_technology{
+            background-image: url(./assets/images/Technology.jpg);
+        }
+
+        &.overlay_materials{
+            background-image: url(./assets/images/materials.jpg);
+        }
+
+        &.overlay_consumerElectronics{
+            background-image: url(./assets/images/consumer_electronics.jpg);
+        }
+
+        &.overlay_utilities{
+            background-image: url(./assets/images/utilities.jpg);
+        }
+
+        &.overlay_communication{
+            background-image: url(./assets/images/communication.jpg);
+        }
+
+        &.overlay_staples{
+            background-image: url(./assets/images/groceries.jpg);
+        }
+
+        &:hover{
+            transform: scale(1.01);
+            background-blend-mode: exclusion;
+        }
+   }
+}
+
+.user-angular-material .mat-dialog-container{
+    padding: 12px;
+}
